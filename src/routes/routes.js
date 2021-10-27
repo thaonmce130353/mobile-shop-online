@@ -27,6 +27,11 @@ const routes = [
         main: ({ match, location }) => <ProductList match={match} location={location} />
     },
     {
+        path: '/products?category=:name',
+        exact: false,
+        main: ({ match, location }) => <ProductList match={match} location={location} />
+    },
+    {
         path: '/news',
         exact: false,
         main: () => <News />

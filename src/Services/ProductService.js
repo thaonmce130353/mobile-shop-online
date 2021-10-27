@@ -3,8 +3,8 @@ import * as API from '../constants/API';
 import * as paginationSetting from '../constants/Pagination';
 
 class ProductService {
-    getListProduct(page, keyword) {
-        return axios.get(API.ALL_PRODUCT + "?keyword=" + keyword + "&page=" + page + "&limit=" + paginationSetting.PAGE_LIMIT);
+    getListProduct(page, keyword, categoryId) {
+        return axios.get(API.ALL_PRODUCT + "?categoryId=" + categoryId + "&keyword=" + keyword + "&page=" + page + "&limit=" + paginationSetting.PAGE_LIMIT);
     }
 }
 

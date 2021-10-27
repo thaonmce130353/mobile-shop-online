@@ -20,17 +20,36 @@ class categories extends Component {
         });
     }
 
+    onClickCategory = (category) => {
+        this.props.onHandleClickCategory(category);
+    }
+
     render() {
         var { categories, url } = this.state;
         var items = categories.map((category) => {
             return <li key={category.id}>
-                        <Link to={`${url}?cateId=${category.id}`}>{category.name}</Link>
-                    </li>
+                <Link
+                    to={`${url}?category=${category.name}`}
+                    onClick={() => this.onClickCategory(category)}
+                >
+                    {category.name}
+                </Link>
+            </li>
         });
+
         return (
             <div className="categories">
                 <ul>
                     <h3>Categories</h3>
+                    <li>
+                        <Link
+                            to={url}
+                            onClick={() => this.onClickCategory({ id: -1 })}
+                        >
+                            All Categories
+                        </Link>
+                    </li>
+
                     {items}
                 </ul>
             </div>

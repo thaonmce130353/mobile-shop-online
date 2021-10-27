@@ -30,7 +30,6 @@ function Pagination(props) {
     );
 
     function handlePageClick(pageClick) {
-        console.log(pageClick)
         var page = pageClick.selected;
         if (onPageChange) {
             onPageChange(page);
