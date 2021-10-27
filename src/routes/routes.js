@@ -2,7 +2,7 @@ import React from 'react';
 import Home from '../components/BodyComponents/home';
 import About from '../components/BodyComponents/about';
 import Contact from '../components/BodyComponents/contact';
-import Products from '../components/BodyComponents/products';
+import ProductList from '../components/BodyComponents/productList';
 import News from '../components/BodyComponents/news';
 
 const routes = [
@@ -24,7 +24,7 @@ const routes = [
     {
         path: '/products',
         exact: false,
-        main: ({ match, location }) => <Products match={match} location={location} />
+        main: ({ match, location }) => <ProductList match={match} location={location} />
     },
     {
         path: '/news',

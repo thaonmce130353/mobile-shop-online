@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import Search from './search';
 
 const menus = [
   {
@@ -56,7 +55,6 @@ class menu extends Component {
             {this.showMenu(menus)}
           </ul>
         </div>
-        <Search />
         <div className="clear" />
       </div>
     );
